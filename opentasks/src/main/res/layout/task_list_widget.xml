@@ -30,7 +30,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="@string/activity_add_task_title"
                 android:src="@drawable/content_new_light"
-                android:padding="4dp"/>
+                android:padding="10dp"/>
     </LinearLayout>
 
     <LinearLayout
