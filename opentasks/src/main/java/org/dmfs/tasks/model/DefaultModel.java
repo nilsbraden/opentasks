@@ -104,13 +104,13 @@ public class DefaultModel extends Model
 
         // location
         addField(new FieldDescriptor(context, R.id.task_field_location, R.string.task_location, TaskFieldAdapters.LOCATION).setViewLayout(LOCATION_VIEW)
-                .setEditorLayout(TEXT_EDIT).setIcon(R.drawable.ic_detail_location));
+                .setEditorLayout(TEXT_EDIT).setIcon(R.drawable.ic_detail_location).setNoAutoAdd(true));
 
         // description
         addField(new FieldDescriptor(context, R.id.task_field_checklist, R.string.task_description, TaskFieldAdapters.DESCRIPTION_CHECKLIST)
                 .setViewLayout(DESCRIPTION_VIEW)
                 .setEditorLayout(DESCRIPTION_EDIT)
-                .setIcon(R.drawable.ic_detail_description));
+                .setIcon(R.drawable.ic_detail_description).setNoAutoAdd(true));
 
         // start
         addField(new FieldDescriptor(context, R.id.task_field_dtstart, R.string.task_start, TaskFieldAdapters.DTSTART).setViewLayout(TIME_VIEW)
@@ -121,24 +121,24 @@ public class DefaultModel extends Model
                 R.drawable.ic_detail_due));
 
         // all day flag
-        addField(new FieldDescriptor(context, R.id.task_field_all_day, R.string.task_all_day, TaskFieldAdapters.ALLDAY).setEditorLayout(BOOLEAN_EDIT));
+        addField(new FieldDescriptor(context, R.id.task_field_all_day, R.string.task_all_day, TaskFieldAdapters.ALLDAY).setEditorLayout(BOOLEAN_EDIT).setNoAutoAdd(true));
 
         // rrule
         addField(new FieldDescriptor(context, R.id.task_field_rrule, R.string.task_recurrence, TaskFieldAdapters.RRULE)
-                .setEditorLayout(RRULE_EDIT).setIcon(R.drawable.ic_baseline_repeat_24));
+                .setEditorLayout(RRULE_EDIT).setIcon(R.drawable.ic_baseline_repeat_24).setNoAutoAdd(true));
 
         TimeZoneChoicesAdapter tzaca = new TimeZoneChoicesAdapter(context);
         // time zone
         addField(new FieldDescriptor(context, R.id.task_field_timezone, R.string.task_timezone, TaskFieldAdapters.TIMEZONE).setEditorLayout(CHOICES_EDIT)
-                .setChoices(tzaca));
+                .setChoices(tzaca).setNoAutoAdd(true));
 
         // completed
         addField(new FieldDescriptor(context, R.id.task_field_completed, R.string.task_completed, TaskFieldAdapters.COMPLETED).setViewLayout(TIME_VIEW)
-                .setEditorLayout(TIME_EDIT).setIcon(R.drawable.ic_detail_completed));
+                .setEditorLayout(TIME_EDIT).setIcon(R.drawable.ic_detail_completed).setNoAutoAdd(true));
 
         // percent complete
         addField(new FieldDescriptor(context, R.id.task_field_percent_complete, R.string.task_percent_complete, TaskFieldAdapters.PERCENT_COMPLETE)
-                .setViewLayout(PROGRESS_VIEW).setEditorLayout(PROGRESS_EDIT).setIcon(R.drawable.ic_detail_progress));
+                .setViewLayout(PROGRESS_VIEW).setEditorLayout(PROGRESS_EDIT).setIcon(R.drawable.ic_detail_progress).setNoAutoAdd(true));
 
         ArrayChoicesAdapter aca2 = new ArrayChoicesAdapter();
         aca2.addChoice(null, context.getString(R.string.priority_undefined), null);
@@ -155,7 +155,7 @@ public class DefaultModel extends Model
 
         // priority
         addField(new FieldDescriptor(context, R.id.task_field_priority, R.string.task_priority, TaskFieldAdapters.PRIORITY).setViewLayout(CHOICES_VIEW)
-                .setEditorLayout(CHOICES_EDIT).setChoices(aca2).setIcon(R.drawable.ic_detail_priority));
+                .setEditorLayout(CHOICES_EDIT).setChoices(aca2).setIcon(R.drawable.ic_detail_priority).setNoAutoAdd(true));
 
         ArrayChoicesAdapter aca3 = new ArrayChoicesAdapter();
         aca3.addChoice(null, context.getString(R.string.classification_not_specified), null);
@@ -165,11 +165,11 @@ public class DefaultModel extends Model
 
         // privacy
         addField(new FieldDescriptor(context, R.id.task_field_classification, R.string.task_classification, TaskFieldAdapters.CLASSIFICATION)
-                .setViewLayout(CHOICES_VIEW).setEditorLayout(CHOICES_EDIT).setChoices(aca3).setIcon(R.drawable.ic_detail_visibility));
+                .setViewLayout(CHOICES_VIEW).setEditorLayout(CHOICES_EDIT).setChoices(aca3).setIcon(R.drawable.ic_detail_visibility).setNoAutoAdd(true));
 
         // url
         addField(new FieldDescriptor(context, R.id.task_field_url, R.string.task_url, TaskFieldAdapters.URL).setViewLayout(URL_VIEW).setEditorLayout(URL_EDIT)
-                .setIcon(R.drawable.ic_detail_url));
+                .setIcon(R.drawable.ic_detail_url).setNoAutoAdd(true));
 
         // task list name
         addField(new FieldDescriptor(context, R.id.task_field_list_and_account_name, R.string.task_list, null, TaskFieldAdapters.LIST_AND_ACCOUNT_NAME)
